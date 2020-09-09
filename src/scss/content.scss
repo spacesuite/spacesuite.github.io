@@ -1,0 +1,241 @@
+//-------------------------------------------------------------------------------
+// Font Import
+//-------------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+//-------------------------------------------------------------------------------
+// Variables
+//-------------------------------------------------------------------------------
+
+// Colors
+$color-background		: #181b22;
+$color-text				: #fff;
+$color-text-link		: #999;
+$color-text-link-hover	: #ccc;
+$color-icon				: #999;
+$color-icon-hover		: #fff;
+
+// Breakpoints
+$bp-smallish 			: 1200px;
+$bp-tablet 				: 800px;
+$bp-mobile 				: 500px;
+
+
+//-------------------------------------------------------------------------------
+// Fade In
+//-------------------------------------------------------------------------------
+
+@keyframes fadein {
+    from { opacity: 0;}
+    to   { opacity: 1;}
+}
+
+//-------------------------------------------------------------------------------
+// Content
+//-------------------------------------------------------------------------------
+
+html,
+body,
+#___gatsby {
+  height: 100% !important;
+  background-color: $color-background; 
+}
+  #gatsby-focus-wrapper {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-direction: column! important;
+    flex-direction: column !important;
+    height: 100% !important;
+  }
+
+*:focus {
+  outline: none !important;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 60px;
+	letter-spacing: -0.5px;
+	color: $color-text;
+
+	p { // used in bio
+		margin-bottom: 28px;
+		color: $color-text;
+
+		@media (max-width: $bp-tablet ) {
+			font-size: 32px;
+			line-height: 40px;
+		}	
+
+	}
+
+}
+
+//-------------------------------------------------------------------------------
+// Sections
+//-------------------------------------------------------------------------------
+
+main {
+	padding: 10vh 10vw;
+	overflow:hidden;
+	position: absolute;
+	z-index: 1000;
+
+	@media (max-width: $bp-mobile ) {
+		padding: 5vh 5vw;
+	}	
+
+  	.content {
+  		height: 80vh;
+		display: flex;
+  		flex-direction: column;
+
+		@media (max-width: $bp-mobile ) {
+			height: 90vh; // as padding now 5vh 5vw
+		}	
+
+	}
+
+}
+
+//-------------------------------------------------------------------------------
+// Logo
+//-------------------------------------------------------------------------------
+
+.logo { 
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-self: left;
+    animation: fadein 2s;
+    max-width: 200px;
+		height: auto;
+
+		@media (max-width: $bp-mobile ) {
+      align-self: center;
+      width: 100%;
+		}
+
+}
+
+//-------------------------------------------------------------------------------
+// Bio
+//-------------------------------------------------------------------------------
+
+.bio { 
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	animation: fadein 4s;
+	letter-spacing: -1px;
+	max-width: 66%;
+
+	@media (max-width: $bp-tablet ) {
+		max-width: none;
+	}
+
+	a {
+		color: $color-text-link;
+		transition: 1s;
+
+		&:hover {
+			color: $color-text-link-hover;
+			transition: 0.1s;
+		}
+
+	}
+
+}
+
+//-------------------------------------------------------------------------------
+// Network
+//-------------------------------------------------------------------------------
+
+.network { 
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	animation: fadein 6s;
+	margin-top: auto;
+
+	ul {
+		animation: fadein 6s;
+		margin-top: auto; // sit at bottom of DIV
+
+		li {
+			display: inline-block;
+			margin-right: 8px;
+
+			a {
+				display: inline-block;
+				width: 30px;
+				height: 30px; 
+				cursor: pointer;
+
+				//-------------------------------------------------------------------------------
+				// SVG Icons - svgicons.sparkk.fr
+				//-------------------------------------------------------------------------------
+
+				.svg-icon {
+					padding: 4px;
+					width: 22px;
+					height: 22px; 
+					margin: 0;
+					display: block;
+				}
+
+				.svg-icon path,
+				.svg-icon polygon,
+				.svg-icon rect {
+					fill: $color-icon;
+					transition: 1s;
+				}
+
+				.svg-icon circle {
+					stroke: $color-icon;
+					stroke-width: 1;
+				}
+
+			}
+
+			a:hover {
+				.svg-icon path,
+				.svg-icon polygon,
+				.svg-icon rect {
+					fill: $color-icon-hover;
+					transition: 0.1s;
+				}
+
+			}
+
+		}
+
+	}
+
+}	
+
+//-------------------------------------------------------------------------------
+// Credit
+//-------------------------------------------------------------------------------
+
+.credit {
+	margin-bottom: 0;
+	animation: fadein 8s;
+
+	p {
+		font-size: 16px; 
+		line-height: 18px;
+		font-weight: 400;
+		opacity: 0.4;
+
+		a { 
+			color: $color-text;
+		}
+
+	}
+
+}

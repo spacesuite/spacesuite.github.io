@@ -1,6 +1,4 @@
 // Global CSS
-import 'bootstrap/scss/bootstrap.scss'
+import './src/scss/spacesuite.scss'
 
 // Global JS
-import 'jquery/dist/jquery.min.js'
-import 'bootstrap/js/src/collapse'

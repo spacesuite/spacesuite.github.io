@@ -5,17 +5,15 @@ import Layout from '../components/layout'
 const File = ({ data }) => {
   return (
     <Layout>
-      <article className="container">
-        <section className="jumbotron p-5 my-5 text-white bg-dark">
-          <div className="col-md-6 px-0">
-            <h1 className="display-4">Content</h1>
-            <p className="lead my-3">List of files in content folder.</p>
-          </div>
+      <main>
+        <section>
+          <h1>Content</h1>
+          <p>List of files in content folder.</p>
         </section>
 
         <h2>Files</h2>
-        <section className="table-responsive mb-4">
-          <table className="table">
+        <section>
+          <table>
             <thead>
               <tr>
                 <th>Path</th>
@@ -36,7 +34,7 @@ const File = ({ data }) => {
             </tbody>
           </table>
         </section>
-      </article>
+      </main>
     </Layout>
   )
 }

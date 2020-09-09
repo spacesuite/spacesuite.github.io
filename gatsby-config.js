@@ -1,26 +1,22 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Bare`,
-    description: `Gatsby Bare Starter.`,
+    title: `Spacesuite`,
+    description: `Spacesuite. A time-based co-working space located in Cyberjaya, Malaysia.`,
     author: `Insabgram`,
-    siteUrl: `https://gatsby.dev`,
+    siteUrl: `https://spacesuite.github.io/`,
     social: {
-      twitter: `insabgram`,
-    },
+      twitter: `insabgram`
+    }
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/content/`,
-      },
+        path: path.join(__dirname, `src`, `images`),
+        name: `images`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -33,16 +29,22 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590
-            },
-          },
-        ],
-      },
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         precision: 6
-      },
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon.jpg`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`
