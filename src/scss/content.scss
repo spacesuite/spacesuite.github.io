@@ -65,15 +65,18 @@ body {
     margin-bottom: 28px;
     color: $color-text;
 
-    @media (max-width: $bp-tablet ) {
-      font-size: 32px;
-      line-height: 40px;
-    }
+    font-size: 24px;
+    line-height: 36px;
+
+    // @media (max-width: $bp-tablet ) {
+    //   font-size: 32px;
+    //   line-height: 40px;
+    // }
     
-    @media (max-width: $bp-mobile ) {
-      font-size: 21px;
-      line-height: 28px;
-    }	
+    // @media (max-width: $bp-mobile ) {
+    //   font-size: 21px;
+    //   line-height: 28px;
+    // }
 
   }
 
@@ -95,11 +98,16 @@ main {
 
     .content {
       height: 80vh;
-    display: flex;
+      display: flex;
       flex-direction: column;
+      background: url(../images/rocket.png) no-repeat fixed;
+      background-position: center;
+      // background-size: 100%;
 
     @media (max-width: $bp-mobile ) {
       height: 90vh; // as padding now 5vh 5vw
+      background-size: 100%;
+      background-position: top;
     }	
 
   }

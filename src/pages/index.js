@@ -16,7 +16,7 @@ const Index = ({ data }) => (
         </div>
 
         <div className="bio">
-          <p>We believe that working together, is freedom. The freedom to explore. The freedom to experiment. The freedom to develop. The freedom to make mistakes. <br/>The freedom to fail and the freedom to learn.</p>
+          <p>We believe that working together, is freedom. The freedom to explore. The freedom to experiment. The freedom to develop. The freedom to make mistakes. The freedom to fail and the freedom to learn.</p>
         </div>
 
         <div className="network">
