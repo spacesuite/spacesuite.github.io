@@ -1,10 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 const File = ({ data }) => {
   return (
     <Layout>
+      <SEO title="File Check" />
       <main>
         <section>
           <h1>Content</h1>

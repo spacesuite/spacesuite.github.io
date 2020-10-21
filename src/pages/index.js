@@ -1,10 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import SEO from '../components/seo'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
 const Index = ({ data }) => (
   <Layout>
+    <SEO />
     <main>
       <div className="content">
         <div className="logo">

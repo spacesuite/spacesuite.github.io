@@ -100,14 +100,14 @@ main {
       height: 80vh;
       display: flex;
       flex-direction: column;
-      background: url(../images/rocket.png) no-repeat fixed;
-      background-position: center;
+      // background: url(../images/rocket.png) no-repeat fixed;
+      // background-position: center;
       // background-size: 100%;
 
     @media (max-width: $bp-mobile ) {
       height: 90vh; // as padding now 5vh 5vw
-      background-size: 100%;
-      background-position: top;
+      // background-size: 100%;
+      // background-position: top;
     }	
 
   }
